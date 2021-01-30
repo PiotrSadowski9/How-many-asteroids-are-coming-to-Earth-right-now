@@ -28,7 +28,8 @@ import React, { Component } from 'react'
         const objectDanger = this.props.list.map((e)=> {
             let nearOb = Object.values(e.near_earth_objects).find(a => a[0])
             const flattenData =  [].concat.apply([], nearOb);
-            const wantedResultData = flattenData.map(obj => <a key={obj.id} href="https://en.wikipedia.org/wiki/Potentially_hazardous_object" target="_blank" rel='noreferrer'> {obj.is_potentially_hazardous_asteroid ===true? "Yes":"No"} </a>);
+            console.log(flattenData)
+            const wantedResultData = flattenData.map(obj => <a key={obj.name} href="https://en.wikipedia.org/wiki/Potentially_hazardous_object" target="_blank" rel='noreferrer'> {obj.is_potentially_hazardous_asteroid ===true? "Yes":"No"} </a>);
             return wantedResultData
 
         });
