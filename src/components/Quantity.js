@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Asteroid from './assets/asteroid.jpeg'
+import Asteroid from './assets/asteroid7.jpeg'
 
 class Quantity extends Component {
     render() {

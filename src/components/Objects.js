@@ -8,7 +8,7 @@ import React, { Component } from 'react'
             const wantedName = flattenDataName.map(el => 
                 <li key={el.id}> <a href={el.nasa_jpl_url} rel='noreferrer' target='_blank' >
                         {el.name}</a> Czy pierdolnie? --- <span>{el.is_potentially_hazardous_asteroid ===true? "Yes":"No"}</span>
-                        <span>  odległość  ---{Math.round(el.close_approach_data[0].miss_distance.kilometers)}kilometrów</span>
+                        <span>  odległość  ---{Math.round(el.close_approach_data[0].miss_distance.astronomical*100)/100}au</span>
                         <span>  rozmiar ---{Math.round(el.estimated_diameter.meters.estimated_diameter_max)}metrów</span>
                 </li>);
             return wantedName
