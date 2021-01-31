@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Objects from './components/Objects'
+import Objects from './components/Objects';
+import Quantity from './components/Quantity';
+import './components/main.css'
 
 export class App extends Component {
   constructor(props){
@@ -12,7 +14,7 @@ export class App extends Component {
   }
   componentDidMount() {
     let currentDate = new Date(); // pobieram date
-    // currentDate.setDate(currentDate.getDate() +1); //następny dzień
+    currentDate.setDate(currentDate.getDate() +1); //następny dzień
     currentDate = currentDate.toISOString().slice(0,10) //wyciągam DD/MM/YYYY
     console.log(currentDate);
     let api = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${currentDate}&end_date=${currentDate}&api_key=Gi4cVv1lnP56upaPiVQjeFlEPWHydqnOCZ0zKtai`;
@@ -32,6 +34,7 @@ export class App extends Component {
               </div>}
     return (
       <div>
+        <Quantity list={this.state.list}/>
         <Objects list={this.state.list}/>
       </div>
     )
