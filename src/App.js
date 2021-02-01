@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Objects from './components/Objects';
 import Quantity from './components/Quantity';
-import './components/main.css'
+import './components/main.css';
+
+
 
 export class App extends Component {
   constructor(props){
@@ -45,8 +47,10 @@ export class App extends Component {
 
   render() {
     if(!this.state.list) {
-      return  <div>
-                abc
+      return  <div className="spinner">
+                <div className="bounce1"></div>
+                <div className="bounce2"></div>
+                <div className="bounce3"></div>
               </div>}
     return (
       <div>

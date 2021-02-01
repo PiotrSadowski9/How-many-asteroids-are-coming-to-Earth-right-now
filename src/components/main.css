@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;1,300&family=Roboto+Condensed:wght@300&display=swap");
+
+:root {
+  --size: 1rem;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .picture {
@@ -13,13 +19,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .quantity {
+  font-family: "Libre Franklin";
+  font-style: italic;
   color: whitesmoke;
   text-align: center;
   font-size: 600px;
-  font-weight: 400;
+  font-weight: 300;
   text-shadow: 3px 3px 9px rgba(19, 29, 84, 0.6);
 }
 
@@ -29,6 +38,140 @@
   width: 100%;
   position: absolute;
   overflow: hidden;
-
+  padding: 5px;
   background-image: url("./assets/textures/subtle-carbon.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.infoContainer {
+  width: 100vw;
+  font-size: 1.5rem;
+  background-color: #f5f5f5;
+}
+#objects {
+  display: flex;
+  justify-content: center;
+}
+
+.objectList {
+  list-style: none;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  width: 75%;
+}
+.objectItem {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: lightgray 1px dashed;
+}
+.listItem {
+  text-decoration: none;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: auto;
+  width: 200px;
+}
+.name:before {
+  content: "Asteroid's name: ";
+  font-size: var(--size);
+  color: grey;
+}
+.name:after {
+  content: ".";
+  font-size: var(--size);
+  color: white;
+}
+.distance:before {
+  content: "How close will it be?";
+  font-size: var(--size);
+  color: grey;
+}
+.distance:after {
+  content: "astronomical units";
+  font-size: var(--size);
+  color: grey;
+}
+.diameter:before {
+  content: "How big is it?";
+  font-size: var(--size);
+  color: grey;
+}
+.diameter:after {
+  content: "meters ⌀";
+  font-size: var(--size);
+  color: grey;
+}
+.hazard:before {
+  content: "Is it dangerous?";
+  font-size: var(--size);
+  color: grey;
+}
+.hazard:after {
+  content: ".";
+  font-size: var(--size);
+  color: white;
+}
+
+.goDown {
+  color: whitesmoke;
+  transform: scale(3);
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
