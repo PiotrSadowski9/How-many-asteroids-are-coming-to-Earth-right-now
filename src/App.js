@@ -52,7 +52,7 @@ export class App extends Component {
       <div>
         <Quantity list={this.state.list}/>
         <Objects list={this.state.list}/>
-        <button onClick={this.handleClick}>Next day!!!</button>
+        <button onClick={this.handleClick}>Check the next day!!!</button>
       </div>
     )
   }
