@@ -11,6 +11,14 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: red;
+  cursor: pointer;
+}
 
 .picture {
   width: 100vw;
@@ -19,7 +27,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .quantity {
   font-family: "Libre Franklin";
   font-style: italic;
@@ -28,6 +35,11 @@
   font-size: 600px;
   font-weight: 300;
   text-shadow: 3px 3px 9px rgba(19, 29, 84, 0.6);
+}
+@media only screen and (max-width: 992px) {
+  .quantity {
+    font-size: 200px;
+  }
 }
 
 .texture {
@@ -46,8 +58,13 @@
 /* Information Secion */
 .infoContainer {
   width: 100vw;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   background-color: #f5f5f5;
+}
+@media only screen and (max-width: 992px) {
+  .infoContainer {
+    font-size: 1em;
+  }
 }
 #objects {
   display: flex;
@@ -58,7 +75,7 @@
   list-style: none;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  width: 60%;
+  width: 75%;
 }
 .objectItem {
   height: 10rem;
@@ -69,13 +86,21 @@
 }
 .listItem {
   text-decoration: none;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   display: flex;
   flex-direction: column;
   text-align: center;
   overflow: auto;
   width: 200px;
+}
+@media only screen and (max-width: 992px) {
+  .distance {
+    display: none;
+  }
+  .diameter {
+    display: none;
+  }
 }
 .name:before {
   content: "Asteroid's name: ";
@@ -85,7 +110,7 @@
 .name:after {
   content: ".";
   font-size: var(--size);
-  color: white;
+  color: #f5f5f5;
 }
 .distance:before {
   content: "How close will it be?";
@@ -115,7 +140,7 @@
 .hazard:after {
   content: ".";
   font-size: var(--size);
-  color: white;
+  color: #f5f5f5;
 }
 
 .goDown {
@@ -190,27 +215,73 @@
 }
 .quoteText {
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.7em;
   font-style: italic;
   font-family: Roboto;
+  padding: 2em;
+}
+@media only screen and (max-width: 992px) {
+  .quoteText {
+    font-size: 1em;
+  }
 }
 .quoteAuthor {
   color: white;
   font-family: "Libre Franklin";
   font-style: italic;
-  padding-top: 1rem;
+  padding-top: 1em;
   align-self: flex-end;
+  padding: 2em;
 }
 
 /* Footer Section */
 
 .footerBox {
-  height: 50vh;
   background-color: #050005;
   color: white;
+  padding: 5% 22%;
 }
 .logos {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   margin-right: 3em;
+  margin-bottom: 4em;
+}
+.footerText {
+  color: rgb(130, 135, 135);
+  font-family: Roboto;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.footerMoreInfo {
+  padding-top: 2em;
+  color: rgb(130, 135, 135);
+  font-size: 1em;
+}
+.expand {
+  text-decoration: underline;
+}
+
+#buttonNextDay {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  background-color: inherit;
+  font-size: 1em;
+  text-decoration: underline;
+}
+#buttonNextDay:hover {
+  color: red;
+  cursor: pointer;
+}
+@media only screen and (max-width: 992px) {
+  .footerText {
+    display: none;
+  }
+  .footerMoreInfo {
+    font-size: 0.8em;
+  }
+  .logos {
+    margin-bottom: 1em;
+  }
 }

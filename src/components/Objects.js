@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         const objectName = this.props.list.map((e)=>{
             let nearOb = Object.values(e.near_earth_objects).find(a => a[0]);
-            const flattenDataName = [].concat.apply([], nearOb);
+            const flattenDataName = [].concat.apply([], nearOb); //pprzypisuję dane do tablicy
             const wantedName = flattenDataName.map(el => 
                 <li className={'objectItem'} key={el.id}> 
                         <a className={'listItem name'} href={el.nasa_jpl_url} rel='noreferrer' target='_blank' >{el.name}</a>

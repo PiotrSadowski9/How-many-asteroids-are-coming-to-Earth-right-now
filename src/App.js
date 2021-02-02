@@ -19,22 +19,20 @@ export class App extends Component {
   componentDidMount() {
     let currentDate = new Date(); // pobieram date
     currentDate = currentDate.toISOString().slice(0,10) //wyciągam DD/MM/YYYY
-    console.log(currentDate);
     let api = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${currentDate}&end_date=${currentDate}&api_key=Gi4cVv1lnP56upaPiVQjeFlEPWHydqnOCZ0zKtai`;
-    axios.get(api)
+    axios.get(api) //wysyłam zapytanie
       .then((res) => {
         this.setState({
-          list:[res.data]
-        },() => console.log(this.state.list)
+          list:[res.data] // zapisuje dane do state
+        },
         );
       })
   }
+  //Ustawiam kolejną datę
   handleClick = (e) => {
     window.scrollTo(0, 0);
     let currentDate = this.state.date;
-    console.log('1', currentDate);
     currentDate.setDate(currentDate.getDate() +1);
-    console.log('2', currentDate);
     currentDate = currentDate.toISOString().slice(0,10);
 
     let api = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${currentDate}&end_date=${currentDate}&api_key=Gi4cVv1lnP56upaPiVQjeFlEPWHydqnOCZ0zKtai`;
@@ -42,7 +40,7 @@ export class App extends Component {
         .then((res) => {
             this.setState({
                 list: [res.data]
-            }, () => console.log(this.state.list));
+            },);
         })
 
 }
@@ -55,12 +53,11 @@ export class App extends Component {
                 <div className="bounce3"></div>
               </div>}
     return (
-      <div>
+      <div className={'bodyBox'}>
         <Quantity list={this.state.list}/>
         <Objects list={this.state.list}/>
         <Quote/>
-        <Footer/>
-        <button onClick={this.handleClick}>Check the next day!!!</button>
+        <Footer handleClick={this.handleClick}/>
       </div>
     )
   }
