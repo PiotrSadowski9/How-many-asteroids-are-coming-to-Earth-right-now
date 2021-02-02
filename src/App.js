@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Objects from './components/Objects';
 import Quantity from './components/Quantity';
+import Quote from './components/Quote'
 import './components/main.css';
+import Footer from './components/Footer'
 
 
 
@@ -56,6 +58,8 @@ export class App extends Component {
       <div>
         <Quantity list={this.state.list}/>
         <Objects list={this.state.list}/>
+        <Quote/>
+        <Footer/>
         <button onClick={this.handleClick}>Check the next day!!!</button>
       </div>
     )
