@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/How-many-asteroids-are-coming-to-Earth-right-now/static/css/main.510585a2.chunk.css",
+    "main.js": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/main.41389fa6.chunk.js",
+    "main.js.map": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/main.41389fa6.chunk.js.map",
+    "runtime-main.js": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/runtime-main.7c6d312e.js",
+    "runtime-main.js.map": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/runtime-main.7c6d312e.js.map",
+    "static/js/2.7b30dce5.chunk.js": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/2.7b30dce5.chunk.js",
+    "static/js/2.7b30dce5.chunk.js.map": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/2.7b30dce5.chunk.js.map",
+    "index.html": "/How-many-asteroids-are-coming-to-Earth-right-now/index.html",
+    "static/css/main.510585a2.chunk.css.map": "/How-many-asteroids-are-coming-to-Earth-right-now/static/css/main.510585a2.chunk.css.map",
+    "static/js/2.7b30dce5.chunk.js.LICENSE.txt": "/How-many-asteroids-are-coming-to-Earth-right-now/static/js/2.7b30dce5.chunk.js.LICENSE.txt",
+    "static/media/INLogo.1359b1f7.png": "/How-many-asteroids-are-coming-to-Earth-right-now/static/media/INLogo.1359b1f7.png",
+    "static/media/asteroid7.c2e8084a.jpeg": "/How-many-asteroids-are-coming-to-Earth-right-now/static/media/asteroid7.c2e8084a.jpeg",
+    "static/media/fbLogo.2417945f.png": "/How-many-asteroids-are-coming-to-Earth-right-now/static/media/fbLogo.2417945f.png",
+    "static/media/stars3.8ea5745f.jpg": "/How-many-asteroids-are-coming-to-Earth-right-now/static/media/stars3.8ea5745f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c6d312e.js",
+    "static/js/2.7b30dce5.chunk.js",
+    "static/css/main.510585a2.chunk.css",
+    "static/js/main.41389fa6.chunk.js"
+  ]
+}
